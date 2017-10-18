@@ -1,0 +1,64 @@
+class FinancialInstrument {
+  1 -- 1 Currency;
+}
+
+class ExchangeRate {}
+
+class Currency {
+  1 -- 1 ExchangeRate;
+}
+
+class USD {
+   isA Currency;
+}
+
+class CAD {
+  isA Currency;
+}
+
+class CreditCard {
+   isA FinancialInstrument;
+}
+
+class Visa {
+  isA CreditCard;
+}
+
+class MasterCard {
+  isA CreditCard;
+}
+
+class DebitCard {
+   isA FinancialInstrument;
+}
+
+class Loan {
+   isA FinancialInstrument;
+}
+
+class Check {
+   isA FinancialInstrument;
+}
+
+class Bank {
+
+}
+
+class BankBranch {
+  * -- 1 Bank;
+}
+
+class BankAccount {
+  * -- 1 Bank;
+  1 -- 1 Currency;
+  1 -- * FinancialInstrument;
+  1 -- 1 BankBranch;
+}
+
+class BankMachine {
+  * -- 1 Bank;
+}
+
+class CreditUnion {
+  isA Bank;
+}
