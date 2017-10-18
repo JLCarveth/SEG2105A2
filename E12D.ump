@@ -1,0 +1,131 @@
+class RegistrationSystem {
+  1 -- * Student;
+  1 -- *  Professor;
+  1 -- * Building;
+  1 -- * Course;
+}
+
+class Student {
+  * -- 1 ProgramOfStudies;
+}
+
+class ProgramOfStudies {
+}
+
+class Course {
+  * -- 1 ProgramOfStudies;
+  1 -- * CourseSection;
+  1 -- * Professor;
+  1 -- * Tutorial;
+  1 -- * Laboratory;
+  1 -- 1 Exam;
+}
+
+class CourseSection {
+  1 -- * ClassRoom;
+  * -- 1 Professor;
+  1 -- * Student;
+}
+
+class Professor {}
+
+class Exam {
+  1 -- 1 TimeSlot;
+}
+
+class Tutorial {
+  1 -- 1 CourseSection;
+  
+}
+
+class TimeSlot {}
+
+class Laboratory {
+  1 -- 1 CourseSection;
+  1 -- 1 TimeSlot;
+  1 -- 1 ClassRoom;
+}
+
+class Building {}
+
+class ClassRoom {
+  * -- 1 Building;
+}
+
+class MeetingRoom {
+  * -- 1 Building;
+}
+
+class Gymnasium {
+  isA Building;
+}//$?[End_of_model]$?
+
+class RegistrationSystem
+{
+  position 50 30 109 45;
+}
+
+class Student
+{
+  position 50 130 109 45;
+}
+
+class ProgramOfStudies
+{
+  position 50 230 109 45;
+}
+
+class Course
+{
+  position 50 330 109 45;
+}
+
+class CourseSection
+{
+  position 50 430 109 45;
+}
+
+class Professor
+{
+  position 250 30 109 45;
+}
+
+class Exam
+{
+  position 250 130 109 45;
+}
+
+class Tutorial
+{
+  position 250 230 109 45;
+}
+
+class TimeSlot
+{
+  position 250 330 109 45;
+}
+
+class Laboratory
+{
+  position 250 430 109 45;
+}
+
+class ClassRoom
+{
+  position 450 30 109 45;
+}
+
+class MeetingRoom
+{
+  position 450 130 109 45;
+}
+
+class Gymnasium
+{
+  position 450 230 109 45;
+}
+
+class Building
+{
+  position 450 30 109 45;
+}
