@@ -1,0 +1,57 @@
+class Student {
+  Integer student_no;
+  String fName;
+  String lName;
+  String email;
+  Integer cell;
+  * -- * Course;
+  
+  Integer[] grades;
+  Integer totalGrade;
+  
+}
+
+class Course {
+  String courseCode;
+  String title;
+  Integer semester;
+  Date date;
+  String desc;
+  
+  enum Status {Enabled, NotEnabled}
+  Status staus;
+ 
+}
+
+class Professor {
+  1 -- * Question;
+  1 -- * Course;
+}
+
+class Question {
+  String question;
+  String[] answers;
+  String correct;
+  
+  enum Status {AV, Active, Visible, Review, Inactive, Closed, Homework}
+  Status status;
+  
+  enum Grade {Attempt, Correct}
+  Grade grade;
+}
+
+class Tournament {
+  Date date;
+  Time time;
+  
+  1 -- * Question;
+  * -- 1 Professor;
+  1 -- * Student;
+  Integer rounds;
+  
+  Integer maxAttempts;
+  Integer lengthOfRound;
+  Integer participationWeight;
+  Integer correctnessWeight;
+  Integer incorrectPenalty;
+}

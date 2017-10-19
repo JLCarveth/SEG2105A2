@@ -1,0 +1,27 @@
+actor professor;
+
+usecase createQuestions {
+  doneby professor;
+}
+
+usecase createCourse {
+  doneby professor;
+}
+
+usecase createTournament {
+  doneby professor;
+}
+
+usecase editClassList {
+  doneby professor;
+}
+
+actor student;
+
+usecase answerQuestion {
+  doneby student;
+}
+
+usecase viewGrade {
+  doneby student;
+}
