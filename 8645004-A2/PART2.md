@@ -2,9 +2,9 @@
 ### John L. Carveth - 8645004
 ### SEG2105 - M. Garzon
   
-E12 D) --->  See E12D.uml
-E12 E) --->  See E12E.uml
-E12 G) --->  See E12G.uml
+#### E12 D) --->  See E12D.uml
+#### E12 E) --->  See E12E.uml
+#### E12 G) --->  See E12G.uml
 
 #### E18 D)
 Calling getScale would trigger an error, as the program will keep checking super classes for the method `getScale()`, though neither EllipticalShape nor any of its superclasses have such a method.
